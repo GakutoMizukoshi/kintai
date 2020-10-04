@@ -1,14 +1,14 @@
-// require('./bootstrap');
+require('./bootstrap');
 
 import Vue from 'vue'
-// ルーティング
+// ルーティングの定義をインポートする
 import router from './router'
-// ルートコンポーネント
+// ルートコンポーネントをインポートする
 import App from './App.vue'
 
 new Vue({
   el: '#app',
-  router, // ルーティング
-  components: { App }, // ルートコンポーネントの使用を宣言
-  template: '<App />' // ルートコンポーネントを描画
+  router, // ルーティングの定義を読み込む
+  components: { App }, // ルートコンポーネントの使用を宣言する
+  template: '<App />' // ルートコンポーネントを描画する
 })
