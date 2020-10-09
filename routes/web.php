@@ -18,6 +18,8 @@ Route::post('/register', 'Auth\RegisterController@register')->name('register');
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 // ログアウト
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+// ログインユーザを返す
+Route::get('/user', fn() => Auth::user())->name('user');
 
 // 基本的な画面ルーティングはvue-routerで制御
-Route::get('/{any?}', fn () => view('index'))->where('any', '.+');
+Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
