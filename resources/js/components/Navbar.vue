@@ -24,14 +24,14 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
+
 export default {
   computed: {
-    isLogin () {
-      return this.$store.getters['auth/check']
-    },
-    username () {
-      return this.$store.getters['auth/username']
-    }
+    ...mapGetters({
+      isLogin: 'auth/check',
+      username: 'auth/username'
+    })
   }
 }
 </script>
